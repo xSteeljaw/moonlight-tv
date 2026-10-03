@@ -1,6 +1,7 @@
 name: Build (webOS)
 
 on:
+workflow_dispatch:
   push:
     # Don't run for tags
     tags-ignore:
@@ -17,7 +18,7 @@ concurrency:
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
-  BUILD_TYPE: Debug
+  BUILD_TYPE: Release
 
 jobs:
   build:
